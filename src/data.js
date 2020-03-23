@@ -56,20 +56,11 @@ export const result = [
 ];
 
 export const stream = [
-    {
-        "name": "よつぎ",
-        "stream": "youtube",
-        "link": "https://www.youtube.com/channel/UCZ5DicEzH5eWivxdaAiXuFQ"
-    },
+    
     {
         "name": "むめい",
         "stream": "twitch",
         "link": "https://www.twitch.tv/mumei_bk"
-    },
-    {
-        "name": "そららら",
-        "stream": "mixer",
-        "link": "https://mixer.com/SRRR"
     },
     {
         "name": "やまいも",
@@ -85,7 +76,17 @@ export const stream = [
         "name": "りんご",
         "stream": "twitch",
         "link": "https://www.twitch.tv/ringorz"
-    }
+    },
+    {
+        "name": "よつぎ",
+        "stream": "youtube",
+        "link": "https://www.youtube.com/channel/UCZ5DicEzH5eWivxdaAiXuFQ"
+    },
+    {
+        "name": "そららら",
+        "stream": "mixer",
+        "link": "https://mixer.com/SRRR"
+    },
 ];
 
 import img_area_logo from "./picture/area.png";

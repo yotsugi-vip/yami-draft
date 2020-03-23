@@ -7,21 +7,20 @@ p {
   font-size: 2.45rem;
   font-weight: 900;
   font-family: "ＭＳ Ｐ明朝", "MS PMincho", sans-serif;
-}
-
-.contents {
-  background-color: rgba(255, 255, 255, 0.37);
+  -webkit-text-stroke: rgb(225, 0, 255) 0.3px;
 }
 
 ul {
   list-style: none;
   text-align: left;
   padding: 2px;
+  margin: 0 10px;
 }
 
 .team {
   display: flex;
   justify-content: space-evenly;
+  margin: 30px 0 10px 0;
 }
 
 .player {
@@ -32,45 +31,53 @@ ul {
   font-size: 0.75rem;
 }
 
-.gameRatio{
+.gameRatio {
   display: flex;
   justify-content: space-evenly;
-  font-family:sans-serif;
-  font-size: 1.1rem;
+  font-family: sans-serif;
+  font-size: 1.5rem;
   font-weight: 900;
 }
 
-.gameMeter{
+.gameRatioAlpha{
+  color: rgb(255, 62, 62);
+  -webkit-text-stroke: rgb(255, 206, 206) 0.05rem;
+}
+
+.gameRarioBlabo{
+  color: rgb(53, 53, 255);
+  -webkit-text-stroke: rgb(189, 189, 255) 0.05rem;
+}
+
+
+.gameMeter {
   display: flex;
   justify-content: space-evenly;
 }
 
 .p_matchCount {
   position: relative;
-  top:1.25rem;
-  font-size: 25px;
+  top: 0.75rem;
+  font-size: 35px;
   font-weight: 600;
 }
 
-meter {
-  width: 100px;
-  height: 30px;
-}
-
-.result{
+.result {
   border: 1px solid;
   border-radius: 8px;
   margin: 0px 3px 10px 3px;
 }
 
-.overAllResult{
+.overAllResult {
   border: 1px solid;
   border-radius: 8px;
   margin: 0px 3px 10px 3px;
+  background-color: rgba(240, 255, 255, 0.5);
+  background-blend-mode: lighten;
 }
 
 .winner {
-  font-size: 32px;
+  font-size: 38px;
   font-weight: 900;
   background: linear-gradient(
       to right,
@@ -85,6 +92,7 @@ meter {
     )
     0% center / 200% auto;
   -webkit-background-clip: text;
+  -webkit-text-stroke: rgb(255, 255, 255) 1px;
   -webkit-text-fill-color: transparent;
   animation: move 4s linear infinite;
 }
