@@ -112,15 +112,15 @@ class App extends Component {
               justifyContent: "space-evenly"
             }}>
               <ul>
-                <li className="gameRatioAlpha" style={{fontSize:"1.5rem",fontWeight:"600"}}>アルファ</li>
-                <li style={{fontSize:"1.5rem"}}>5勝</li>
+                <li className="gameRatioAlpha" style={{ fontSize: "1.5rem", fontWeight: "600" }}>アルファ</li>
+                <li style={{ fontSize: "1.5rem" }}>5勝</li>
               </ul>
               <ul>
-                <li className="gameRarioBlabo" style={{fontSize:"1.5rem",fontWeight:"600"}}>ブラボー</li>
-                <li style={{fontSize:"1.5rem"}}>0勝</li>
+                <li className="gameRarioBlabo" style={{ fontSize: "1.5rem", fontWeight: "600" }}>ブラボー</li>
+                <li style={{ fontSize: "1.5rem" }}>0勝</li>
               </ul>
             </div>
-            <p style={{fontSize:"1.5rem"}}>優勝 アルファチーム</p>
+            <p style={{ fontSize: "1.5rem" }}>優勝 アルファチーム</p>
             <p className="winner">Congratulations!</p>
             <img src={getImage("アルファ")} alt="win team"
               style={{
@@ -135,38 +135,41 @@ class App extends Component {
             backgroundBlendMode: "lighten"
           }}>
             <p style={{
-              fontSize:"1.5rem",
-              fontStyle:"oblique"
+              fontSize: "1.5rem",
+              fontStyle: "oblique",
+              fontWeight:"700"
             }}>more streams</p>
-            <ul>
-              {stream.map((stream, i) => (
-                <li key={i}>
-                  <div style={{
-                    display: "flex",
-                    justifyContent: "start",
-                    position: "relative",
-                    left: "10rem",
-                  }}>
+            <div style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              padding:"10px"
+            }}>
+              <ul>
+                {stream.map((stream, i) => (
+                  <li key={i}>
+                    <div style={{
+                      display: "flex",
+                    }}>
+                      <a href={stream.link}>
+                        <img src={getImage(stream.stream)} alt="stramsite"
+                          style={{
+                            backgroundColor: "white",
+                            borderRadius: "8px",
+                            width: "80px"
+                          }} />
+                      </a>
+                      <p style={{
+                        position:"relative",
+                        top:"25px",
+                        left:"5px",
+                        fontSize: "1.5rem",
+                      }}>{stream.name}</p>
+                    </div>
 
-                    <a href={stream.link}>
-                      <img src={getImage(stream.stream)} alt="stramsite"
-                        style={{
-                          backgroundColor:"white",
-                          borderRadius: "8px",
-                          width: "80px"
-                        }} />
-                    </a>
-                    <p style={{
-                      position: "absolute",
-                      fontSize: "1.5rem",
-                      left: "85px",
-                      bottom: "30px"
-                    }}>{stream.name}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-
+                  </li>
+                ))}
+              </ul>
+            </div>
             <p>制作 よつぎ</p>
             <a href="https://github.com/yotsugi-vip/yami-draft">ソースコード</a>
           </div>
